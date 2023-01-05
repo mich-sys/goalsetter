@@ -26,7 +26,9 @@ function Login() {
       toast.error(message)
     }
 
-   
+    if (isSuccess || user) {
+      navigate('/')
+    }
 
     dispatch(reset())
   }, [user, isError, isSuccess, message, navigate, dispatch])
@@ -52,11 +54,6 @@ function Login() {
   if (isLoading) {
     return <Spinner />
   }
-
-  if (isSuccess || user) {
-    navigate('/')
-  }
-
 
   return (
     <>

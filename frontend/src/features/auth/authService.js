@@ -31,8 +31,8 @@ const logout = ()=> {
 
 const authService = {
     register,
-    login,
     logout,
+    login,
     
  }
 
